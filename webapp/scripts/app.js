@@ -13,10 +13,15 @@ angular.module("tutor", ["ngRoute", "ngResource", "ngAnimate", "ngMaterial", "ng
         templateUrl: "views/posttest.html",
         controller: "PosttestCtrl"
     }).
+    when("/questionary", {
+        templateUrl: "views/questionary.html",
+        controller: "QuestionaryCtrl"
+    }).  
     when("/finish", {
         templateUrl: "views/finish.html",
         controller: "FinishCtrl"
     }).
+   
     otherwise({
         redirectTo: "/pretest"
     });

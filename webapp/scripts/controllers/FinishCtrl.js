@@ -12,6 +12,8 @@ angular.module('tutor').controller("FinishCtrl", function($scope, User) {
             description: 'Participe deste estudo sobre ansiedade e descubra!',
             picture: 'https://pixabay.com/static/uploads/photo/2016/02/07/14/51/hatena-1184896_960_720.png',
             layout: 'button'
-        }, function(response) {});
+        }, function (response) { });
+      
     };
+    
 });

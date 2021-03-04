@@ -39,7 +39,7 @@ angular.module('tutor').controller("HomeCtrl", function($scope, $location, $mdDi
         points: 7,
         avatar: "assets/" + configService.getTheme() + "/images/ranking4.png"
     }, {
-        name: "Alex",
+        name: "Gil",
         points: totalPoints,
         avatar: userAvatar
     }];
@@ -273,7 +273,7 @@ angular.module('tutor').controller("HomeCtrl", function($scope, $location, $mdDi
             points: 7,
             avatar: "assets/" + configService.getTheme() + "/images/ranking4.png"
         }, {
-            name: "Alex",
+            name: "Gil",
             points: totalPoints,
             avatar: userAvatar
         }];

@@ -50,7 +50,8 @@ tutorServices.service("User", function($http) {
         activityPoints: 0,
         posttestPoints: 0,
         pre: [],
-        post: []
+        post: [],
+    
     };
 
     this.setGender = function(value) {

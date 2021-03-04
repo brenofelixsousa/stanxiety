@@ -37,7 +37,7 @@ angular.module('tutor').controller("PosttestCtrl", function($scope, $location, U
             User.setEndTime(time);
             User.save();
 
-            $location.path("/finish");
+            $location.path("/questionary");
 
         };
     }

@@ -1,27 +1,3 @@
-
-## Gender stereotypes, student anxiety, and gamification
-
-
-This repository contains the code for the experiment described in the article, "[Does gender stereotype threat in gamified educational environments cause anxiety? An experimental study](https://www.sciencedirect.com/science/article/abs/pii/S0360131517301914)."
-
-### How to cite
-* Albuquerque, J., Bittencourt, I. I., Coelho, J. A., & Silva, A. P. (2017). Does gender stereotype threat in gamified educational environments cause anxiety? An experimental study. Computers & Education, 115, 161-170.
-* Bibtex:
-```
-@article{albuquerque2017does,
-	title = "Does gender stereotype threat in gamified educational environments cause anxiety? An experimental study",
-	journal = "Computers & Education",
-	volume = "115",
-	pages = "161 - 170",
-	year = "2017",
-	issn = "0360-1315",
-	doi = "https://doi.org/10.1016/j.compedu.2017.08.005",
-	url = "http://www.sciencedirect.com/science/article/pii/S0360131517301914",
-	author = "Josmario Albuquerque and Ig I. Bittencourt and Jorge A.P.M. Coelho and Alan P. Silva",
-	keywords = "Gender studies, Anxiety, Stereotype threat, Gamification in education",
-}
-```
-
 ## Overview
 This project comprises an experimental environment to study the impact of gender stereotype threat on student anxiety. In summary, the application has the following workflow:
 1. Consent form

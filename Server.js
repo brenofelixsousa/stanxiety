@@ -20,7 +20,7 @@ app.post('/save-response', function(req, res, next){
   var respId = uuid.v1()
 
   //data to be saved (participant's response)
-  var row = [respId, req.body.startTime, req.body.endTime, req.body.gender, req.body.age, req.body.testType, req.body.pretestPoints, req.body.activityPoints, req.body.posttestPoints, req.body.pre, req.body.post].join(";")+"\n"
+  var row = [respId, req.body.startTime, req.body.endTime, req.body.gender, req.body.age, req.body.testType, req.body.pretestPoints, req.body.activityPoints, req.body.posttestPoints, req.body.pre, req.body.post, req.body.flowPoints,req.body.flow].join(";")+"\n"
 
   fs.stat('responses.csv', function (err, stat) {
       if (err == null) {

@@ -45,7 +45,7 @@ angular.module('tutor').controller("PosttestCtrl", function($scope, $location, U
             $scope.msg = "Por favor, responda todas as perguntas!"
         } else {
 
-            var time = new Date().getTime();
+          
 
             var ans = $scope.answers;
             console.log(ans);
@@ -70,8 +70,6 @@ angular.module('tutor').controller("PosttestCtrl", function($scope, $location, U
 
             User.setPosttestPoints(sum);
             User.setPost(ans);
-            User.setEndTime(time);
-            User.save();
 
             $location.path("/flow");
 

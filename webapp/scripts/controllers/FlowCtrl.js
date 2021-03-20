@@ -47,10 +47,7 @@ angular
       ];
       $scope.answers = [];
 
-      $scope.setTime = function () {
-        var time = new Date().getTime();
-        User.setStartTime(time);
-      };
+      var time = new Date().getTime();
 
       $scope.processAnswers = function () {
         //console.log($scope.answers);
@@ -82,12 +79,10 @@ angular
           console.log(ans);
           console.log("FLOW: " + sum);
 
-          configService.setTheme(themes[random]);
-          User.setGender($scope.gender);
-          User.setAge($scope.age);
-          User.setTestType(themes[random]);
-          User.setPretestPoints(sum);
-          User.setPre(ans);
+          User.setFlowPoints(sum);
+          User.setFlow(ans);
+          User.setEndTime(time);
+          User.save();
 
           console.log(User.getResponse());
           // User.save();

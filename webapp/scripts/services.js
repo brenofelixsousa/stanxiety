@@ -49,9 +49,10 @@ tutorServices.service("User", function($http) {
         pretestPoints: 0,
         activityPoints: 0,
         posttestPoints: 0,
+        flowPoints: 0,
         pre: [],
         post: [],
-    
+        flow: [],
     };
 
     this.setGender = function(value) {
@@ -73,6 +74,9 @@ tutorServices.service("User", function($http) {
     this.setPosttestPoints = function(value) {
         resp.posttestPoints = value;
     };
+    this.setFlowPoints = function(value) {
+        resp.flowPoints = value;
+    };
 
     this.setActivityPoints = function(value) {
         resp.activityPoints = value;
@@ -92,6 +96,10 @@ tutorServices.service("User", function($http) {
 
     this.setPost = function(value) {
         resp.post = value;
+    };
+
+    this.setFlow = function(value) {
+        resp.flow = value;
     };
 
     this.setStartTime = function(value) {

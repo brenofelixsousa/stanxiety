@@ -1,26 +1,44 @@
- <!--comentar-->
+<!--comentar-->
 
 <div layout-padding>
     <div layout="row" layout-align="center center">
         <md-card layout="column" layout-align="center center" flex="auto" width="50%">
             <md-toolbar layout="row" layout-align="center center" layout-padding class="md-primary md-hue-2">
-                <label>Etapa VI - Questionário Socioeconômico</label>
+                <label>Etapa VI - QuestionÃ¡rio SocioeconÃ´mico</label>
             </md-toolbar>
         </md-card>
     </div>
     <div layout="row" layout-align="center center" class="bg">
         <md-card layout="column" layout-align="center center" flex="auto" width="50%">
             <md-card-title>
-                <p> Para finalizar, responda as perguntas abaixo marcando as alternativas que melhor se adequem ao seu perfil socioeconômico.</p>
+                <p> Para finalizar, responda as perguntas abaixo marcando as alternativas que melhor se adequem ao seu
+                    perfil socioeconÃ´mico.</p>
             </md-card-title>
 
-
+            <div layout="column" layout-align="center left">
+                <md-input-container>
+                    <label>Nome</label>
+                    <input type="text" name="name">
+                </md-input-container>
+                <md-input-container flex-gt-sm>
+                    <label ng-required="true">GÃªnero</label>
+                    <md-select ng-required="true" ng-model="gender">
+                        <md-option ng-repeat="g in ['Masculino','Feminino', 'Prefiro nÃ£o Responder']">
+                            {{g}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Idade</label>
+                    <input type="text" name="age" ng-required="true" ng-model="age">
+                </md-input-container>
+            </div>
 
             <md-card-content>
                 <form>
-                    <label>1- Quantidade de automóveis de passeio exclusivamente para uso particular: </label>
+                    <label>1- Quantidade de automÃ³veis de passeio exclusivamente para uso particular: </label>
                     <md-radio-group ng-model="data.group1" aria-labelledby="q1">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
@@ -28,9 +46,10 @@
 
                     </md-radio-group>
                     <hr />
-                    <label>2- Quantidade de empregados mensalistas, considerando apenas os que trabalham pelo menos cinco dias por semana: </label>
+                    <label>2- Quantidade de empregados mensalistas, considerando apenas os que trabalham pelo menos
+                        cinco dias por semana: </label>
                     <md-radio-group ng-model="data.group2" aria-labelledby="q2">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
@@ -39,9 +58,9 @@
 
                     </md-radio-group>
                     <hr />
-                    <label>3- Quantidade de máquinas de lavar roupa, excluindo tanquinho: </label>
+                    <label>3- Quantidade de mÃ¡quinas de lavar roupa, excluindo tanquinho: </label>
                     <md-radio-group ng-model="data.group3" aria-labelledby="q3">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
@@ -52,7 +71,7 @@
                     <hr />
                     <label>4- Quantidade de banheiros: </label>
                     <md-radio-group ng-model="data.group4" aria-labelledby="q4">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
@@ -60,9 +79,10 @@
 
                     </md-radio-group>
                     <hr />
-                    <label>5- DVD,, incluindo qualquer dispositivo que leia DVD e desconsiderando DVD de automóvel: </label>
+                    <label>5- DVD,, incluindo qualquer dispositivo que leia DVD e desconsiderando DVD de automÃ³vel:
+                    </label>
                     <md-radio-group ng-model="data.group5" aria-labelledby="q5">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
@@ -72,7 +92,7 @@
                     <hr />
                     <label>6- Quantidade de geladeiras: </label>
                     <md-radio-group ng-model="data.group6" aria-labelledby="q6">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
@@ -81,7 +101,7 @@
                     <hr />
                     <label>7- Quantidade de freezers independentes ou parte da geladeira duples:</label>
                     <md-radio-group ng-model="data.group7" aria-labelledby="q7">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
@@ -89,9 +109,10 @@
 
                     </md-radio-group>
                     <hr />
-                    <label>8- Quantidade de microcomputadores, considerando computadores de mesa, laptops, notebooks e netbooks e desconsiderando tablets, palms ou smartphones</label>
+                    <label>8- Quantidade de microcomputadores, considerando computadores de mesa, laptops, notebooks e
+                        netbooks e desconsiderando tablets, palms ou smartphones</label>
                     <md-radio-group ng-model="data.group8" aria-labelledby="q8">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
@@ -99,9 +120,9 @@
 
                     </md-radio-group>
                     <hr />
-                    <label>9- Quantidade de lavadora de louças:</label>
+                    <label>9- Quantidade de lavadora de louÃ§as:</label>
                     <md-radio-group ng-model="data.group9" aria-labelledby="q9">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
@@ -111,25 +132,26 @@
                     <hr />
                     <label>10- Quantidade de fornos de micro-ondas:</label>
                     <md-radio-group ng-model="data.group10" aria-labelledby="q10">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
                         <md-radio-button value="e">4+ </md-radio-button>
                     </md-radio-group>
                     <hr />
-                    <label>11-Quantidade de motocicletas, desconsiderando as usadas exclusivamente para uso profissional:</label>
+                    <label>11-Quantidade de motocicletas, desconsiderando as usadas exclusivamente para uso
+                        profissional:</label>
                     <md-radio-group ng-model="data.group11" aria-labelledby="q11">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
                         <md-radio-button value="e">4+ </md-radio-button>
                     </md-radio-group>
                     <hr />
-                    <label>12- Quantidade de máquinas secadoras de roupas, considerando lava e seca:</label>
+                    <label>12- Quantidade de mÃ¡quinas secadoras de roupas, considerando lava e seca:</label>
                     <md-radio-group ng-model="data.group12" aria-labelledby="q12">
-                        <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">NÃ£o possui</md-radio-button>
                         <md-radio-button value="b">1 </md-radio-button>
                         <md-radio-button value="c">2 </md-radio-button>
                         <md-radio-button value="d">3</md-radio-button>
@@ -138,17 +160,17 @@
                     </md-radio-group>
                     <hr />
 
-                    <label>13- A água utilizada neste domicílio é proveniente de?</label>
+                    <label>13- A Ã¡gua utilizada neste domicÃ­lio Ã© proveniente de?</label>
                     <md-radio-group ng-model="data.group13" aria-labelledby="q13">
-                        <md-radio-button value="a" class="md-primary">Rede geral de distribuição.</md-radio-button>
-                        <md-radio-button value="b">Poço ou nascente. </md-radio-button>
+                        <md-radio-button value="a" class="md-primary">Rede geral de distribuiÃ§Ã£o.</md-radio-button>
+                        <md-radio-button value="b">PoÃ§o ou nascente. </md-radio-button>
                         <md-radio-button value="c">Outro meio.</md-radio-button>
 
 
                     </md-radio-group>
                     <hr />
 
-                    <label>14- Considerando o trecho da rua do seu domicílio, você diria que a rua é:</label>
+                    <label>14- Considerando o trecho da rua do seu domicÃ­lio, vocÃª diria que a rua Ã©?:</label>
                     <md-radio-group ng-model="data.group14" aria-labelledby="q14">
                         <md-radio-button value="a" class="md-primary">Asfaltada/Pavimentada.</md-radio-button>
                         <md-radio-button value="b">Terra/Cascalho. </md-radio-button>
@@ -158,7 +180,7 @@
                     <hr />
 
 
-                    <label>15- Qual a sua região?</label>
+                    <label>15- Qual a sua regiÃ£o?</label>
                     <md-radio-group ng-model="data.group15" aria-labelledby="q15">
                         <md-radio-button value="a" class="md-primary">Norte.</md-radio-button>
                         <md-radio-button value="b">Nordeste. </md-radio-button>
@@ -170,24 +192,27 @@
 
                     </md-radio-group>
                     <hr />
-                    <label>16- Qual é a sua cidade?</label>
-                   
-                        <input type="text" name="cidade" ng-required="true" ng-model="cidade">
+                    <label>16- Qual Ã© a sua cidade?</label>
+
+                    <input type="text" name="cidade" ng-required="true" ng-model="cidade">
 
 
                     <hr />
-                    <label>17- Qual é o grau de instrução do chefe de família? Considere como chefe de família a pessoa que contribui com a maior parte da renda do domicílio.</label>
+                    <label>17- Qual Ã© o grau de instruÃ§Ã£o do chefe de famÃ­lia? Considere como chefe de famÃ­lia a pessoa
+                        que contribui com a maior parte da renda do domicÃ­lio.</label>
                     <md-radio-group ng-model="data.group17" aria-labelledby="q17">
-                        <md-radio-button value="a" class="md-primary">Analfabeto/Fundamental I incompleto.</md-radio-button>
+                        <md-radio-button value="a" class="md-primary">Analfabeto/Fundamental I incompleto.
+                        </md-radio-button>
                         <md-radio-button value="b">Fundamental I completo/Fundamental II incompleto. </md-radio-button>
-                        <md-radio-button value="c">Fundamental completo/Médio incompleto. </md-radio-button>
-                        <md-radio-button value="d">Médio completo/Superior incompleto. </md-radio-button>
+                        <md-radio-button value="c">Fundamental completo/MÃ©dio incompleto. </md-radio-button>
+                        <md-radio-button value="d">MÃ©dio completo/Superior incompleto. </md-radio-button>
                         <md-radio-button value="e">Superior completo. </md-radio-button>
 
 
                     </md-radio-group>
                     <hr />
-                    <md-button ng-click="processAnswers()" type="submit" class="md-raised md-primary">Finalizar!</md-button>
+                    <md-button ng-click="processAnswers()" type="submit" class="md-raised md-primary">Finalizar!
+                    </md-button>
                     <span>{{msg}}</span>
 
 

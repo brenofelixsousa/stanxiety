@@ -21,7 +21,10 @@ angular.module("tutor", ["ngRoute", "ngResource", "ngAnimate", "ngMaterial", "ng
         templateUrl: "views/finish.html",
         controller: "FinishCtrl"
     }).
-   
+    when("/flow", {
+        templateUrl: "views/flow.html",
+        controller: "FlowCtrl"
+    }).
     otherwise({
         redirectTo: "/pretest"
     });
@@ -58,14 +61,3 @@ window.fbAsyncInit = function() {
         version: 'v2.8'
     });
 };
-
-(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {
-        return;
-    }
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "libs/facebook/facebook.js";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));

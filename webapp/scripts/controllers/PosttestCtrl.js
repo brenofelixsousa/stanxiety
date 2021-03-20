@@ -1,11 +1,47 @@
 angular.module('tutor').controller("PosttestCtrl", function($scope, $location, User) {
 
-    $scope.questions = ["Sinto-me Calmo", "Sinto-me Seguro", "Estou tenso", "Estou arrependido", "Sinto-me à vontade", "Sinto-me perturbado", "Estou preocupado com possíveis infortúnios", "Sinto-me descansado", "Sinto-me ansioso", "Sinto-me 'em casa'", "Sinto-me confiante", "Sinto-me nervoso", "Sinto-me agitado", "Sinto-me em uma pilha de nervos", "Estou descontraído", "Sinto-me satisfeito", "Estou preocupado", "Sinto-me confuso", "Sinto-me alegre", "Sinto-me bem"];
+    $scope.questions = ["Quando eu assisti a essa atividade pela primeira vez, tive a impressão de que seria fácil para mim", 
+    "Havia alguma coisa interessante no início desta atividade que me chamou a atenção", 
+    "Este material foi mais difícil de entender do que eu gostaria.", 
+    "Depois de ler as informações iniciais, eu me senti confiante de que sabia o que se esperava que deveria ser aprendido com essa atividade. ",
+    "Completar os exercícios dessa atividade me deu um sentimento satisfatório de realização",
+    "Está claro para mim como o conteúdo deste material está relacionado com conhecimentos que eu já tenho. ",
+    "Muitas das páginas tinham tanta informação que foi difícil escolher e lembrar os pontos importantes. ", 
+    "Esses materiais são interessantes",
+    "Havia histórias, figuras ou exemplos que me mostraram como esse material poderia ser importante para algumas pessoas. ",
+    "Completar essa atividade com sucesso foi importante para mim",
+    "A qualidade da escrita ajudou a manter minha atenção", 
+    "Essa atividade é tão abstrata que foi difícil manter minha atenção nela",
+    "Enquanto eu trabalhava nessa atividade, estava confiante de que poderia aprender o conteúdo",
+    "Gostei tanto dessa atividade que gostaria de saber mais sobre este assunto",
+    "As páginas desse material parecem pouco interessantes", 
+    "O conteúdo desse material é relevante para os meus interesses",
+    "A forma como a informação está organizada nas páginas ajudou a manter minha atenção",
+    "Há explicações ou exemplos de como as pessoas usam o conhecimento dessa atividade",
+    "Os exercícios dessa atividade foram muito difíceis", 
+    "Esta atividade tem elementos que estimularam minha curiosidade",
+    "Gostei muito de estudar essa atividade",
+    "A quantidade de repetição nesta atividade me fez ficar, eventualmente, entediado",
+    "O conteúdo e o estilo de escrita neste material dão a impressão de que vale a pena conhecê-lo", 
+    "Aprendi algumas coisas que foram surpreendentes ou inesperadas",
+    "Depois de trabalhar nessa atividade por algum tempo, eu estava confiante de que seria capaz de passar em um teste sobre ela",
+    "Esta atividade não foi relevante para as minhas necessidades porque eu já sabia a maior parte dela",
+    "A maneira como foi dado o feedback após os exercícios, ou outros comentários na atividade, ajudou-me a sentir recompensado pelo meu esforço", 
+    "A variedade de trechos de leitura, exercícios, ilustrações etc., ajudou a manter minha atenção na atividade",
+    "O estilo de escrever é entediante",
+    "Eu pude relacionar o conteúdo desta atividade com as coisas que tenho visto, feito ou pensado sobre minha própria vida",
+    "Há tantas palavras em cada página que é irritante", 
+    "Foi bom concluir esta atividade com sucesso",
+    "O conteúdo desta atividade será útil para mim",
+    "Eu realmente não consegui entender muito o material desta atividade",
+    "A boa organização do conteúdo me ajudou a ter certeza de que eu aprenderia este material", 
+    "Foi um prazer trabalhar em uma atividade tão bem planejada.",
+    ];
     $scope.answers = [];
 
     $scope.processAnswers = function() {
 
-        if ($scope.answers.length < 20) {
+        if ($scope.answers.length < 36) {
             $scope.msg = "Por favor, responda todas as perguntas!"
         } else {
 
@@ -37,7 +73,7 @@ angular.module('tutor').controller("PosttestCtrl", function($scope, $location, U
             User.setEndTime(time);
             User.save();
 
-            $location.path("/questionary");
+            $location.path("/flow");
 
         };
     }

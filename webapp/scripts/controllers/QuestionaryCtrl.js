@@ -39,7 +39,6 @@ angular
         return parseInt(a) + parseInt(b);
       }
 
-    //   User.setName($scope.name);
       User.setAge($scope.age);
       User.setGender($scope.gender);
       User.setEmail($scope.email);
@@ -47,31 +46,12 @@ angular
       User.setSexualOrientation($scope.sexualOrientation);
       User.setCivilState($scope.civilState);
       User.setCity($scope.city);
-      // User.setActivityFlow(sum);
-      // User.setPost(ans);
-      // User.setEndTime(time);
+      User.setEmail($scope.email);
+      User.setWhatsapp($scope.whatsapp);
+
       User.save();
 
       $location.path("/finish");
-
-      $scope.data = {
-        group1: "a",
-        group2: "a",
-        group3: "a",
-        group4: "a",
-        group5: "a",
-        group6: "a",
-        group7: "a",
-        group8: "a",
-        group9: "a",
-        group10: "a",
-        group11: "a",
-        group12: "a",
-        group13: "a",
-        group14: "a",
-        group15: "a",
-        group17: "a",
-      };
 
       /** $location.path("/finish"); */
     };

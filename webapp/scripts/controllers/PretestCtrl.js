@@ -4,40 +4,15 @@ angular.module('tutor').controller("PretestCtrl", function($scope, $window, $loc
 
     var random = Math.floor((Math.random() * 10000)) % 3;
 
-    $scope.questions = ["Sinto-me desafiado, mas acredito que minhas habilidades irão me permitir enfrentar o desafio",
-    "Faço coisas corretamente sem pensar sobre como fazer", 
-    "Sei claramente o que quero fazer", 
-    "É muito claro para mim como estou me saindo na atividade",
-    "Minha atenção está focada inteiramente no que estou fazendo", 
-    "Tenho um senso de controle sobre o que estou fazendo", 
-    "Não estou preocupado com o que os outros podem estar pensando de mim", 
-    "O tempo parece alterado (mais devagar ou mais rápido)",
-    "Realmente gosto da experiência que estou tendo", 
-    "Minhas habilidades combinam com o desafio que estou experimentando", 
-    "As coisas parecem acontecer automaticamente", 
-    "Tenho uma forte noção do que quero fazer",
-    "Estou ciente do quão bem estou fazendo", 
-    "Não há esforço em manter a minha mente no que está acontecendo", 
-    "Sinto que posso controlar o que estou fazendo", 
-    "Não estou preocupado em como os outros podem me avaliar",
-    "A forma como o tempo passa parece ser diferente da normal", 
-    "Amo a sensação relacionada ao que estou fazendo e quero sentir novamente", 
-    "Sinto que sou competente o suficiente para atender às demandas da situação", 
+    $scope.questions = [
+    "Minhas habilidades combinam com o desafio que estou experimentando",
     "Realizo a atividade automaticamente sem pensar muito",
     "Sei o que quero alcançar", 
-    "Tenho uma boa ideia do quão bem estou me saindo enquanto estou envolvido na tarefa/atividade", 
-    "Tenho total concentração", 
-    "Tenho um sentimento de total controle sobre o que estou fazendo",
-    "Não estou preocupado com a forma como estou me apresentando", 
-    "Parece que o tempo passa rapidamente", 
-    "A experiência me deixa me sentindo ótimo", 
-    "O desafio e minhas habilidades estão em um nível igualmente alto",
-    "Faço as coisas de forma espontânea e automática sem ter que pensar", 
-    "Meus objetivos estão claramente definidos", 
-    "Pela forma como as coisas estão progredindo percebo se estou indo bem",
+    "É muito claro para mim como estou me saindo na atividade",
     "Estou completamente focado na tarefa em questão", 
-    "Sinto-me em total controle das minhas ações", 
-    "Perdi minha noção de consciência sobre o tempo",
+    "Tenho um sentimento de total controle sobre o que estou fazendo",
+    "Não estou preocupado com o que os outros podem estar pensando de mim", 
+    "A forma como o tempo passa parece ser diferente da normal", 
     "A experiência é extremamente recompensadora"];
     $scope.answers = [];
 
@@ -50,7 +25,7 @@ angular.module('tutor').controller("PretestCtrl", function($scope, $window, $loc
 
         //console.log($scope.answers);
         //  validation
-        if ($scope.answers.length < 20) {
+        if ($scope.answers.lenght < 9) {
             $scope.msg = "Por favor, responda todas as perguntas!"
         } else {
             function add(a, b) {

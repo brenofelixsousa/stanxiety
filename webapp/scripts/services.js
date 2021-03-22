@@ -52,6 +52,8 @@ tutorServices.service("User", function($http) {
         sexualOrientation: "",
         civilState: "",
         city: "",
+        email: "",
+        whatsapp:"",
         pretestPoints: 0,
         activityPoints: 0,
         posttestPoints: 0,
@@ -89,8 +91,12 @@ tutorServices.service("User", function($http) {
     this.setCity = function(value) {
         resp.city = value;
     }
-
-
+    this.setEmail = function(value) {
+        resp.email = value;
+    }
+    this.setWhatsapp = function(value) {
+        resp.whatsapp = value;
+    }
     this.setTestType = function(value) {
         resp.testType = value;
     };
@@ -128,6 +134,10 @@ tutorServices.service("User", function($http) {
 
     this.setFlow = function(value) {
         resp.flow = value;
+    };
+
+    this.setQuestions = function(value) {
+        resp.questions = value;
     };
 
     this.setStartTime = function(value) {

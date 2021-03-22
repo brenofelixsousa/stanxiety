@@ -52,7 +52,7 @@ angular
       $scope.processAnswers = function () {
         //console.log($scope.answers);
         //  validation
-        if ($scope.answers.length < 20) {
+        if ($scope.answers.lenght < 20) {
           $scope.msg = "Por favor, responda todas as perguntas!";
         } else {
           function add(a, b) {

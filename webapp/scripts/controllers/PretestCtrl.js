@@ -78,8 +78,8 @@ angular.module('tutor').controller("PretestCtrl", function($scope, $window, $loc
             console.log("PRETEST: " + sum);
 
             configService.setTheme(themes[random]);
-            User.setGender($scope.gender);
-            User.setAge($scope.age);
+            // User.setGender($scope.gender);
+            // User.setAge($scope.age);
             User.setTestType(themes[random]);
             User.setPretestPoints(sum);
             User.setPre(ans);

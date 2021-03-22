@@ -15,11 +15,43 @@
                     perfil socioeconômico.</p>
             </md-card-title>
 
-            <div layout="column" layout-align="center left">
-                <md-input-container>
-                    <label>Nome</label>
-                    <input type="text" name="name">
+            <div layout="row">
+                    <md-input-container class="block" flex-get-sm>
+                        <label>Nome</label>
+                        <input type="text" name="name" ng-required="true">
+                    </md-input-container>
+
+                    <md-input-container flex-gt-sm>
+                        <label>Idade</label>
+                        <input type="text" name="age" ng-required="true" ng-model="age">
+                    </md-input-container>
+
+                    <md-input-container class="block" flex-gt-sm>
+                        <label>Email</label>
+                        <input type="text" name="email" ng-required="true" ng-model="email">
+                    </md-input-container>
+
+                    <md-input-container class="block" flex-gt-sm>
+                        <label>Estado civil</label>
+                        <md-select ng-required="true" ng-model="civilState">
+                            <md-option
+                                ng-repeat="g in ['Solteiro(a)','Casado(a)', 'União estável', 'Divorciado(a)','Viúvo', 'Prefiro não Responder']">
+                                {{g}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+            </div>
+            <div>
+                <md-input-container class="block" flex-gt-sm>
+                    <label>Etnia</label>
+                    <md-select ng-required="true" ng-model="ethnicity">
+                        <md-option
+                            ng-repeat="g in ['Pardo','Negro', 'Branco', 'Indígenas', 'Prefiro não Responder']">
+                            {{g}}
+                        </md-option>
+                    </md-select>
                 </md-input-container>
+
                 <md-input-container flex-gt-sm>
                     <label ng-required="true">Gênero</label>
                     <md-select ng-required="true" ng-model="gender">
@@ -28,11 +60,27 @@
                         </md-option>
                     </md-select>
                 </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Idade</label>
-                    <input type="text" name="age" ng-required="true" ng-model="age">
+
+
+                <md-input-container class="block" flex-gt-sm>
+                    <label>Orientação sexual</label>
+                    <md-select ng-required="true" ng-model="sexualOrientation">
+                        <md-option
+                            ng-repeat="g in ['Cisgênero','Transgênero', 'Não-binário', 'Prefiro não Responder']   ">
+                            {{g}}
+                        </md-option>
+                    </md-select>
                 </md-input-container>
             </div>
+
+            <md-card-content layout-align="center center" layout="column">
+                <p>Cisgênero: é a pessoa que se identifica com o sexo biológico designado no momento de seu
+                    nascimento. </p>
+
+                <p>Transgênero: é quem se identifica com um gênero diferente daquele atribuído no nascimento. </p>
+                <p> Não-binário: é alguém que não se identifica completamente com o “gênero de nascença” nem com
+                    outro gênero.</p>
+            </md-card-content>
 
             <md-card-content>
                 <form>
@@ -79,7 +127,7 @@
 
                     </md-radio-group>
                     <hr />
-                    <label>5- DVD,, incluindo qualquer dispositivo que leia DVD e desconsiderando DVD de automóvel:
+                    <label>5- DVD, incluindo qualquer dispositivo que leia DVD e desconsiderando DVD de automóvel:
                     </label>
                     <md-radio-group ng-model="data.group5" aria-labelledby="q5">
                         <md-radio-button value="a" class="md-primary">Não possui</md-radio-button>
@@ -194,7 +242,7 @@
                     <hr />
                     <label>16- Qual é a sua cidade?</label>
 
-                    <input type="text" name="cidade" ng-required="true" ng-model="cidade">
+                    <input type="text" name="city" ng-required="true" ng-model="city">
 
 
                     <hr />

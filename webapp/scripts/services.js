@@ -43,9 +43,15 @@ tutorServices.service("User", function($http) {
     var resp = {
         startTime: 0,
         endTime: 0,
+        name: "",
         gender: "",
         age: "",
+        email:"",
         testType: "",
+        ethnicity: "",
+        sexualOrientation: "",
+        civilState: "",
+        city: "",
         pretestPoints: 0,
         activityPoints: 0,
         posttestPoints: 0,
@@ -55,6 +61,9 @@ tutorServices.service("User", function($http) {
         flow: [],
     };
 
+    this.setName = function(value) {
+        resp.name = value;
+    }
     this.setGender = function(value) {
         resp.gender = value;
     };
@@ -62,6 +71,25 @@ tutorServices.service("User", function($http) {
     this.setAge = function(value) {
         resp.age = value;
     };
+
+    this.setEmail = function(value) {
+        resp.email = value;
+    }
+
+    this.setEthnicity = function(value) {
+        resp.ethnicity = value;
+    }
+
+    this.setSexualOrientation = function(value) {
+        resp.sexualOrientation = value;
+    }
+    this.setCivilState = function(value) {
+        resp.civilState = value;
+    }
+    this.setCity = function(value) {
+        resp.city = value;
+    }
+
 
     this.setTestType = function(value) {
         resp.testType = value;
@@ -86,7 +114,7 @@ tutorServices.service("User", function($http) {
         return resp;
     };
 
-    this.getAnxiety = function() {
+    this.getMotivation = function() {
         return resp.pretestPoints;
     };
 

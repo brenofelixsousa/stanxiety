@@ -25,7 +25,7 @@ angular.module('tutor').controller("PretestCtrl", function($scope, $window, $loc
 
         //console.log($scope.answers);
         //  validation
-        if ($scope.answers.lenght < 9) {
+        if ($scope.answers.length < 9) {
             $scope.msg = "Por favor, responda todas as perguntas!"
         } else {
             function add(a, b) {

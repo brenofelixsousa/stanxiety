@@ -44,7 +44,6 @@ angular
       User.setGender($scope.gender);
       User.setEmail($scope.email);
       User.setEthnicity($scope.ethnicity);
-      User.setSexualOrientation($scope.sexualOrientation);
       User.setCivilState($scope.civilState);
       User.setCity($scope.city);
       User.setEmail($scope.email);

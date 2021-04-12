@@ -40,6 +40,7 @@ angular
       }
 
       User.setAge($scope.age);
+      User.setName($scope.name);
       User.setGender($scope.gender);
       User.setEmail($scope.email);
       User.setEthnicity($scope.ethnicity);

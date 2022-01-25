@@ -1,0 +1,100 @@
+---
+title: "Reliability - analisis for kelly' experiment"
+author: "Geiser Chalco <geiser@alumni.usp.br>"
+date: "5/14/2021" 
+output:
+  html_document: 
+  toc: true
+toc_depth: 3
+theme: default
+highlight: default
+fontsize: 10pt
+---
+
+```
+{r setup, purl=FALSE, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+defaultW <- getOption("warn")
+options(warn = -1)
+```
+
+
+
+Arquivos:
+
+ - Script em R: [reliability-analysis.R](reliability-analysis.R)
+ - Dados em excel: [responses.xlsx](responses.xlsx)
+
+
+
+# Instalar e carregar pacotes de R necessários
+
+```{r, include=T, echo=F}
+library(readxl)
+library(dplyr)
+library(psych)
+```
+
+Lista de pacotes usados:
+
+ - **readxl**: manipulação de arquivos no formato excel .xlsx
+ - **meta**: métodos estatísticos de calculo de metanálise 
+ - **metafor**: métodos estatísticos de calculo de metaregresão
+ - **dmetar**: métodos estatísticos avançados para metanálises (deteção de outliers e metanalises de subgrupos)
+ - **esc**: métodos estatísticos para calculo de tamnhos de efeito
+
+
+# Step 1: Carregar os dados na variável madata
+
+```{r}
+data <- read_excel("responses.xlsx")
+
+dfs_dat <- select(data, starts_with("dfs0"))
+alpha(dfs_dat)
+```
+
+```{r}
+fss_dat <- select(data, starts_with("fss0"))
+alpha(fss_dat)
+```
+
+```{r}
+atencao_dat <- data[,c("motivationPos02","motivationPos08","motivationPos11"
+                       ,"motivationPos12*","motivationPos15*","motivationPos17"
+                       ,"motivationPos20","motivationPos22*","motivationPos24"
+                       ,"motivationPos28","motivationPos29*","motivationPos31*")]
+alpha(atencao_dat)
+```
+
+```{r}
+relevance_dat <- data[,c("motivationPos06","motivationPos09","motivationPos10"
+                       ,"motivationPos16","motivationPos18","motivationPos23"
+                       ,"motivationPos26*","motivationPos30","motivationPos33")]
+alpha(relevance_dat)
+```
+
+```{r}
+confi_dat <- data[,c("motivationPos01","motivationPos03*","motivationPos04"
+                     ,"motivationPos07*","motivationPos13","motivationPos19*"
+                     ,"motivationPos25","motivationPos34*","motivationPos35")]
+alpha(confi_dat)
+```
+
+
+```{r}
+satisf_dat <- data[,c("motivationPos05","motivationPos14","motivationPos21"
+                     ,"motivationPos27","motivationPos32","motivationPos36")]
+alpha(satisf_dat)
+```
+
+
+
+```{r}
+motiv_dat <- select(data, starts_with("motivationPos"))
+alpha(motiv_dat)
+```
+
+
+
+
+  

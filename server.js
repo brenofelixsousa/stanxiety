@@ -46,5 +46,5 @@ app.post('/save-response', function(req, res, next){
 
 });
 
-app.listen(8063, 'https://weblab.nees.com.br/bruno/');
+app.listen(8063, 'weblab.nees.com.br/bruno');
 console.log("This project is listening on port 8063");

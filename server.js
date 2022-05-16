@@ -46,8 +46,5 @@ app.post('/save-response', function(req, res, next){
 
 });
 
-
-app.listen(config.get('8063'), config.get('https://weblab.nees.com.br/bruno/'), err => {
-    if (err) throw err;
-    console.error(`server listening on ${server.address().port}`);
-  })
+app.listen(8063, 'https://weblab.nees.com.br/bruno/');
+console.log("This project is listening on port 8063");
